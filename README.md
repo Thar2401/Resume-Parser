@@ -40,7 +40,7 @@ How It Works
 
 References
 
-	•	[Dlib Library](http://dlib.net/)
+	•	Dlib Library
  
 	•	OpenCV Documentation
  
