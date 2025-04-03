@@ -37,6 +37,15 @@ How It Works
  
 	5.	If significant movement is detected, an alert message is displayed.
 
+ Make sure you have the following Python libraries installed:
+
+cv2 (OpenCV): Captures and processes video frames
+
+dlib: Detects and tracks facial landmarks
+
+numpy: Performs mathematical computations
+
+
 
 References
 
