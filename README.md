@@ -3,6 +3,7 @@ Face Movement & Eye Tracking Detector
 Project Description
 
 This project is a real-time face movement detection system that uses Dlib and OpenCV to track facial landmarks. It detects:
+
 	•	Head tilt (left/right)
  
 	•	Head movement (left/right)
@@ -14,6 +15,7 @@ This project is a real-time face movement detection system that uses Dlib and Op
 This can be used for attention tracking, security applications, and gesture recognition.
 
 Features
+
 	•	Detects head tilt based on eye alignment
  
 	•	Detects head turns using nose position
@@ -24,6 +26,7 @@ Features
 
 
 How It Works
+
 	1.	The script captures video frames from the webcam.
  
 	2.	It uses Dlib’s face detector to find a face in the frame.
@@ -36,6 +39,7 @@ How It Works
 
 
 References
+
 	•	Dlib Library
  
 	•	OpenCV Documentation
