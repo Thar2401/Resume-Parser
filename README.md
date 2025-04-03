@@ -4,16 +4,22 @@ Project Description
 
 This project is a real-time face movement detection system that uses Dlib and OpenCV to track facial landmarks. It detects:
 	•	Head tilt (left/right)
+ 
 	•	Head movement (left/right)
+ 
 	•	Eyeball movement
+ 
 	•	General face movement
 
 This can be used for attention tracking, security applications, and gesture recognition.
 
 Features
 	•	Detects head tilt based on eye alignment
+ 
 	•	Detects head turns using nose position
+ 
 	•	Detects eyeball movement based on relative eye landmark shifts
+ 
 	•	Alerts when movement exceeds a threshold
 
 
