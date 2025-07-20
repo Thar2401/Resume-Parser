@@ -35,11 +35,3 @@ pip install spacy pymupdf python-docx
 python -m spacy download en_core_web_sm
 
 
-Project structure:
-
-resume-parser/
-│
-├── parser.py               # Main script to extract information
-├── sample-resume.pdf       # Sample input file (optional)
-├── models/                 # (Optional) Any models or assets used
-└── README.md               # This file
