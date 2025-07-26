@@ -1,0 +1,5 @@
+spacy
+pymongo
+flask
+pymupdf
+python-docx
