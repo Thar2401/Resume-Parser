@@ -1,37 +1,88 @@
+# Resume Parser using spaCy & PyMuPDF
 
-Resume Parser
+📄 **Description**
 
-A simple resume parser built using Python that extracts essential information from resumes such as name, email, phone number, education, skills, and project experience. The application uses Natural Language Processing (NLP) techniques including Named Entity Recognition (NER) with spaCy and text extraction from PDF/DOCX files using PyMuPDF (fitz) and python-docx.
+A simple and effective resume parser that extracts relevant information such as name, email, phone number, skills, experience, education, and more from PDF or DOCX resumes using natural language processing (NLP) techniques. The extracted information is stored in a MongoDB database, and can be visualized via a connected dashboard interface.
 
-Features
-	•	Extracts candidate details including:
-	•	Full Name
-	•	Email Address
-	•	Phone Number
-	•	Location
-	•	Education
-	•	Work Experience
-	•	Skills
-	•	Projects
-	•	Supports both PDF and DOCX formats
-	•	Custom mapping for correcting misclassified entities
-	•	Easily integratable with a backend or web application
+⚙️ **Technologies Used**
 
-Technologies Used
-	•	Python
-	•	spaCy (for Named Entity Recognition)
-	•	PyMuPDF (fitz) (for PDF text extraction)
-	•	python-docx (for DOCX text extraction)
-	•	re (regular expressions)
+- Python  
+- spaCy (NLP for Named Entity Recognition)  
+- PyMuPDF (fitz) (for PDF text extraction)  
+- python-docx (for DOCX file parsing)  
+- Regular Expressions (for custom parsing)  
+- pymongo (to interact with MongoDB)  
+- MongoDB (to store parsed data)
 
-Installation
+🗃️ **Project Structure**
 
-Clone the repository:
-git clone https://github.com/your-username/resume-parser.git
-cd resume-parser
+```
+resume-parser/
+├── parser.py               # Main script for parsing and storing data
+├── models/                 # Pretrained models (if any)
+├── sample_resumes/         # Sample resumes to test
+├── requirements.txt        # List of required Python packages
+├── dashboard.py            # Streamlit dashboard to view parsed data
+└── README.md               # Project documentation
+```
 
-Install the required Python libraries:
-pip install spacy pymupdf python-docx
-python -m spacy download en_core_web_sm
+🧠 **Features**
 
+- Extracts information using NER (spaCy).  
+- Supports both PDF and DOCX resumes.  
+- Custom regex-based extraction for emails, phone numbers, and skills.  
+- Stores parsed results in MongoDB.  
+- Optional dashboard integration to display stored data (e.g., Flask/Streamlit frontend).
 
+🚀 **Getting Started**
+
+1. Clone the Repository  
+   ```bash
+   git clone https://github.com/yourusername/resume-parser.git
+   cd resume-parser
+   ```
+
+2. Install Dependencies  
+   Make sure you have Python 3.10+ installed. Then install the required packages:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Parser  
+   Edit parser.py and change the file path:  
+   ```python
+   file_path = "/path/to/your/resume.pdf"  # or .docx
+   ```  
+   Then run:  
+   ```bash
+   python parser.py
+   ```
+
+4. View Data in MongoDB  
+   Start the mongo shell:  
+   ```bash
+   mongosh
+   ```  
+   Use the database:  
+   ```javascript
+   use resumeDB
+   ```  
+   Find the data:  
+   ```javascript
+   db.resumes.find().pretty()
+   ```
+
+📊 **Streamlit Dashboard (Optional)**
+
+To visualize the parsed resume data using Streamlit:
+
+1. Make sure MongoDB is running and parser.py has already inserted data.
+
+2. Launch the Streamlit dashboard:  
+   ```bash
+   streamlit run dashboard.py
+   ```
+
+3. Open the provided local URL in your browser (usually http://localhost:8501) to see the parsed resumes in a clean UI.
+
+The dashboard will automatically fetch documents from the MongoDB collection and display them in a user-friendly layout.
